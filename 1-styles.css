@@ -36,7 +36,7 @@
   --nav-item-margin: 0 2rem 0 0;
 
   /** SECTION **/
-  --section-padding: 5rem 0;
+  --section-padding: 5rem 0 3rem;
   --section-inner-align: center;
 
   /** BUTTON **/
@@ -74,7 +74,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment:fixed;
   color: var(--text-color);
   font-family: var(--font-family-base);
   font-size: var(--font-size-medium);
@@ -123,6 +123,7 @@ a {
 
 /* Navbar 
 ============================= */
+
 .nav .nav-item {
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-bold);
@@ -147,7 +148,7 @@ a {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .button {
@@ -202,8 +203,61 @@ section {
   margin-bottom: 2rem;
 }
 
+/* What we do... section
+============================= */
+#what-we-do {
+  background-color: white;
+  color: black;
+  padding: 50px 0;
+}
+
+#what-we-do .section-header .section-tagline{
+  padding-bottom: 50px;
+  width: 65%;
+  margin: auto;
+}
+
+.card-services {
+  width: 210px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;  
+}
+
+#what-we-do .row {
+  padding: 0 0 0 0;
+}
+
+#what-we-do ul {
+  list-style: none;
+  display: flex;
+}
+
+.colum-what-we-do {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+[class*='holberton_school-icon-ic_'] {
+  font-size: 100px;
+  color: var(--color-secondary);
+}
+
+.colum-what-we-do .section-tagline {
+  font-size: small;
+}
+
 /* Adaptative layout
 ============================= */
+
+@media only screen and (max-width: 1000px) {
+
+  .container {
+    width: 100%;
+  }
+
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -211,15 +265,26 @@ section {
     width: 95%;
   }
 
-  .section-hero .section-inner {
+  .section-hero .section-inner, #what-we-do .section-tagline, #what-we-do .row {
     width: 100%;
   }
   .container {
     width: 90%;
-    display: flexbox;
+    display: flex;
     flex-wrap: wrap;
     margin: auto;
   }
+
+  #what-we-do ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .colum-what-we-do {
+    width: 50%;
+  }
+
 }
 
 /* Mobile Menu
@@ -301,5 +366,9 @@ section {
   
   .header-container input:checked ~ nav {
     display: block;
+  }
+
+  .colum-what-we-do {
+    width: 100%;
   }
 }
