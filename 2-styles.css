@@ -26,6 +26,7 @@
   --font-size-xx-large: xx-large;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
+  --font-weight-semibold: 600;
   --line-height-small: 1.2;
   --line-height-base: 1.5;
   --line-height-big: 1.8;
@@ -89,7 +90,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-title);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .section-title {
@@ -203,7 +204,7 @@ section {
   margin-bottom: 2rem;
 }
 
-/* What we do... section
+/* What we do... & our results... sections
 ============================= */
 #what-we-do {
   background-color: white;
@@ -211,7 +212,15 @@ section {
   padding: 50px 0;
 }
 
-#what-we-do .section-header .section-tagline{
+#our-results {
+  background-image: url('images/headphones_hero_2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#what-we-do .section-header .section-tagline,
+#our-results .section-header .section-tagline {
   padding-bottom: 50px;
   width: 65%;
   margin: auto;
@@ -224,16 +233,25 @@ section {
   flex-direction: column;  
 }
 
+#our-results .col-sections {
+  padding-bottom: 50px;
+}
+
+.icon-trapezoid .card-services {
+  width: 250px;
+}
+
 #what-we-do .row {
   padding: 0 0 0 0;
 }
 
-#what-we-do ul {
+#what-we-do ul,
+#our-results ul {
   list-style: none;
   display: flex;
 }
 
-.colum-what-we-do {
+.col-sections {
   width: 25%;
   display: flex;
   justify-content: center;
@@ -244,8 +262,26 @@ section {
   color: var(--color-secondary);
 }
 
-.colum-what-we-do .section-tagline {
+.col-sections .section-tagline {
   font-size: small;
+}
+
+.icon-trapezoid {
+  background-image: url('images/pentagone.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  
+}
+
+.icon-trapezoid .card-title {
+  font-size: var(--font-size-xx-large);
+  margin: 50px 0 0 0;
+}
+
+.icon-trapezoid .section-tagline {
+  font-size: 0.6rem;
+  margin: 0 0 30px 0;
 }
 
 /* Adaptative layout
@@ -256,7 +292,6 @@ section {
   .container {
     width: 100%;
   }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -265,17 +300,12 @@ section {
     width: 95%;
   }
 
-  .section-hero .section-inner, #what-we-do .section-tagline, #what-we-do .row {
-    width: 100%;
-  }
-
-  .section-hero .section-inner,
-  #what-we-do .section-tagline,
+  .section-hero .section-inner, 
+  #what-we-do .section-tagline, 
   #what-we-do .row,
-  #what-we-do .section-header .section-tagline {
+  #our-results .section-tagline {
     width: 100%;
   }
-  
   .container {
     width: 90%;
     display: flex;
@@ -283,13 +313,14 @@ section {
     margin: auto;
   }
 
-  #what-we-do ul {
+  #what-we-do ul,
+  #our-results ul{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
   }
 
-  .colum-what-we-do {
+  .col-sections {
     width: 50%;
   }
 
@@ -376,7 +407,7 @@ section {
     display: block;
   }
 
-  .colum-what-we-do {
+  .col-sections {
     width: 100%;
   }
 }
